@@ -1,0 +1,247 @@
+/** @format */
+
+.App {
+  position: fixed;
+  width: 100vw;
+  height: 100px;
+  left: 0px;
+  top: 0px;
+  background: #282945;
+  color: aliceblue;
+  border-bottom: 1px solid green;
+}
+
+.logo {
+  position: absolute;
+  width: 299px;
+  height: 30px;
+  left: 60px;
+  top: 30px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: #ffffff;
+}
+
+.walletBtn {
+  position: absolute;
+  width: 250px;
+  height: 50px;
+  right: 15px;
+  top: 26px;
+  background: #22223a;
+  border-radius: 20px;
+  border: 0ch;
+  color: #ffffff;
+  font-size: 19px;
+}
+
+.domainInputs {
+  position: absolute;
+  width: 90%;
+  height: 270px;
+  left: 50%;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+  top: 140px;
+  background: #282945;
+}
+
+.mintedDomains {
+  position: relative;
+  width: 90%;
+  height: 600px;
+  left: 50%;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+  top: 430px;
+  margin-top: 30px;
+  background: #282945;
+  overflow: scroll;
+}
+
+.foot {
+  position: relative;
+  height: 20px;
+  left: -100px;
+  margin-top: 30px;
+  top: 400px;
+}
+
+.input_and_text {
+  position: absolute;
+  width: 300px;
+  height: 45px;
+  left: 50%;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+  top: 20px;
+  border-radius: 10px;
+  background: #22223a;
+  border: 0ch;
+}
+
+.domainInput {
+  position: absolute;
+  width: 250px;
+  height: 45px;
+  left: 0;
+  top: 0;
+  background: #22223a;
+  border: 0ch;
+  color: #ffffff;
+  text-align: center;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+input {
+  outline: 0ch;
+}
+
+.domain_text {
+  position: absolute;
+  width: 50px;
+  height: 45px;
+  right: 0;
+  top: 0;
+  background: #22223a;
+  border: 0ch;
+  color: #ffffff;
+  text-align: left;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.domainInput_v {
+  position: absolute;
+  width: 300px;
+  height: 45px;
+  left: 50%;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+  top: 80px;
+  border-radius: 10px;
+  background: #22223a;
+  border: 0ch;
+  color: #ffffff;
+  text-align: center;
+}
+.browser {
+  position: absolute;
+  width: 300px;
+  height: 45px;
+  left: 50%;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+  top: 140px;
+  border-radius: 10px;
+  background: #22223a;
+  border: 0ch;
+  color: #ffffff;
+  text-align: center;
+}
+
+.mint {
+  position: absolute;
+  width: 300px;
+  height: 45px;
+  left: 50%;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+  top: 140px;
+  border-radius: 10px;
+  background: #383879;
+  border: 0ch;
+  color: #ffffff;
+  text-align: center;
+}
+
+.allMintedDomains {
+  position: fixed;
+  width: 298px;
+  height: 30px;
+  left: 50%;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+  top: 20px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: #ffffff;
+}
+
+.mintedDomains_container {
+  position: absolute;
+  width: 98%;
+  height: 85%;
+  left: 50%;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+  top: 60px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  margin-left: 4px;
+  /* background-color: black; */
+}
+
+.nftcard {
+  box-sizing: border-box;
+  position: relative;
+  width: 200px;
+  height: 260px;
+  margin-left: 20px;
+  top: 8px;
+  background: none;
+  border: 0.5px dotted #fbfbfb;
+  border-radius: 20px;
+}
+
+.domainNft {
+  position: absolute;
+  top: 10px;
+  width: 180px;
+  height: 200px;
+  left: 50%;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+  background: #d9d9d9;
+  transition: transform 0.6s ease all;
+  transform-style: preserve-3d;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.price {
+  position: absolute;
+  width: max-content;
+  height: 50px;
+  top: 218px;
+  left: 7px;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.buy {
+  position: absolute;
+  width: max-content;
+  height: 35px;
+  top: 215px;
+  right: 8px;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 20px;
+  color: #ffffff;
+  border: 0;
+  background-color: #383879;
+  font-size: 12px;
+
+  border-bottom-right-radius: 10px;
+}
