@@ -20,7 +20,7 @@ contract Velas is ERC721URIStorage {
     string svgPartTwo = "</text></svg>";
     string public vls = "vls";
 
-    uint256 listingPrice = 1 ether;
+    uint256 listingPrice = 0.001 ether;
     address payable owner;
 
     mapping(uint256 => MarketItem) private idToMarketItem;
@@ -71,7 +71,7 @@ contract Velas is ERC721URIStorage {
         uint256 newTokenId = _tokenIds.current();
         velasDomain[msg.sender] = userName;
         boolRegistered[msg.sender] = true;
-        uint _price = price;
+        // uint _price = price;
 
         // Combine the name passed into the function  with the vls TLD
         string memory _name = string(abi.encodePacked(userName, ".", vls));
@@ -109,11 +109,11 @@ contract Velas is ERC721URIStorage {
     }
 
     function createMarketItem(uint256 tokenId, uint256 price) private {
-        // require(price > 0, "Price must be at least 1 wei");
-        // require(
-        //     msg.value == listingPrice,
-        //     "Price must be equal to listing price"
-        // );
+        require(price > 0, "Price must be at least 1 wei");
+        require(
+            msg.value == listingPrice,
+            "Price must be equal to listing price"
+        );
 
         idToMarketItem[tokenId] = MarketItem(
             tokenId,

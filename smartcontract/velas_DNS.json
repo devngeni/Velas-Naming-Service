@@ -1,5 +1,5 @@
 {
-  "address": "0xa7e5A52980F8ce8f0c01209d122094C507cFe985",
+  "address": "0xc870f5AA42139337FF43A1e03f7fc94c1D15b520",
   "abi": [
     { "type": "constructor", "payable": false, "inputs": [] },
     {
@@ -81,18 +81,6 @@
       "payable": true,
       "inputs": [{ "type": "uint256", "name": "tokenId" }],
       "outputs": []
-    },
-    {
-      "type": "function",
-      "name": "createToken",
-      "constant": false,
-      "stateMutability": "payable",
-      "payable": true,
-      "inputs": [
-        { "type": "uint256", "name": "price" },
-        { "type": "string", "name": "userName" }
-      ],
-      "outputs": [{ "type": "uint256" }]
     },
     {
       "type": "function",
@@ -201,6 +189,18 @@
       "payable": false,
       "inputs": [{ "type": "uint256", "name": "tokenId" }],
       "outputs": [{ "type": "address" }]
+    },
+    {
+      "type": "function",
+      "name": "register",
+      "constant": false,
+      "stateMutability": "payable",
+      "payable": true,
+      "inputs": [
+        { "type": "uint256", "name": "price" },
+        { "type": "string", "name": "userName" }
+      ],
+      "outputs": [{ "type": "uint256" }]
     },
     {
       "type": "function",

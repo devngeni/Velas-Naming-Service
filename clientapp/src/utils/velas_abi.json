@@ -1,629 +1,320 @@
 {
-  "address": "0x984a40d479BC8d0515E58a5522AB603E684B8895",
+  "address": "0xc870f5AA42139337FF43A1e03f7fc94c1D15b520",
   "abi": [
+    { "type": "constructor", "payable": false, "inputs": [] },
     {
-      "inputs": [],
-      "stateMutability": "nonpayable",
-      "type": "constructor"
-    },
-    {
+      "type": "event",
       "anonymous": false,
-      "inputs": [
-        {
-          "indexed": true,
-          "internalType": "address",
-          "name": "owner",
-          "type": "address"
-        },
-        {
-          "indexed": true,
-          "internalType": "address",
-          "name": "approved",
-          "type": "address"
-        },
-        {
-          "indexed": true,
-          "internalType": "uint256",
-          "name": "tokenId",
-          "type": "uint256"
-        }
-      ],
       "name": "Approval",
-      "type": "event"
+      "inputs": [
+        { "type": "address", "name": "owner", "indexed": true },
+        { "type": "address", "name": "approved", "indexed": true },
+        { "type": "uint256", "name": "tokenId", "indexed": true }
+      ]
     },
     {
+      "type": "event",
       "anonymous": false,
-      "inputs": [
-        {
-          "indexed": true,
-          "internalType": "address",
-          "name": "owner",
-          "type": "address"
-        },
-        {
-          "indexed": true,
-          "internalType": "address",
-          "name": "operator",
-          "type": "address"
-        },
-        {
-          "indexed": false,
-          "internalType": "bool",
-          "name": "approved",
-          "type": "bool"
-        }
-      ],
       "name": "ApprovalForAll",
-      "type": "event"
+      "inputs": [
+        { "type": "address", "name": "owner", "indexed": true },
+        { "type": "address", "name": "operator", "indexed": true },
+        { "type": "bool", "name": "approved", "indexed": false }
+      ]
     },
     {
+      "type": "event",
       "anonymous": false,
-      "inputs": [
-        {
-          "indexed": true,
-          "internalType": "uint256",
-          "name": "tokenId",
-          "type": "uint256"
-        },
-        {
-          "indexed": false,
-          "internalType": "address",
-          "name": "seller",
-          "type": "address"
-        },
-        {
-          "indexed": false,
-          "internalType": "address",
-          "name": "owner",
-          "type": "address"
-        },
-        {
-          "indexed": false,
-          "internalType": "uint256",
-          "name": "price",
-          "type": "uint256"
-        },
-        {
-          "indexed": false,
-          "internalType": "bool",
-          "name": "sold",
-          "type": "bool"
-        }
-      ],
       "name": "MarketItemCreated",
-      "type": "event"
+      "inputs": [
+        { "type": "uint256", "name": "tokenId", "indexed": true },
+        { "type": "address", "name": "seller", "indexed": false },
+        { "type": "address", "name": "owner", "indexed": false },
+        { "type": "uint256", "name": "price", "indexed": false },
+        { "type": "bool", "name": "sold", "indexed": false }
+      ]
     },
     {
+      "type": "event",
       "anonymous": false,
-      "inputs": [
-        {
-          "indexed": true,
-          "internalType": "address",
-          "name": "from",
-          "type": "address"
-        },
-        {
-          "indexed": true,
-          "internalType": "address",
-          "name": "to",
-          "type": "address"
-        },
-        {
-          "indexed": true,
-          "internalType": "uint256",
-          "name": "tokenId",
-          "type": "uint256"
-        }
-      ],
       "name": "Transfer",
-      "type": "event"
+      "inputs": [
+        { "type": "address", "name": "from", "indexed": true },
+        { "type": "address", "name": "to", "indexed": true },
+        { "type": "uint256", "name": "tokenId", "indexed": true }
+      ]
     },
     {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "to",
-          "type": "address"
-        },
-        {
-          "internalType": "uint256",
-          "name": "tokenId",
-          "type": "uint256"
-        }
-      ],
+      "type": "function",
       "name": "approve",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
+      "constant": false,
+      "payable": false,
+      "inputs": [
+        { "type": "address", "name": "to" },
+        { "type": "uint256", "name": "tokenId" }
+      ],
+      "outputs": []
     },
     {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "owner",
-          "type": "address"
-        }
-      ],
+      "type": "function",
       "name": "balanceOf",
-      "outputs": [
-        {
-          "internalType": "uint256",
-          "name": "",
-          "type": "uint256"
-        }
-      ],
+      "constant": true,
       "stateMutability": "view",
-      "type": "function"
+      "payable": false,
+      "inputs": [{ "type": "address", "name": "owner" }],
+      "outputs": [{ "type": "uint256" }]
     },
     {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "",
-          "type": "address"
-        }
-      ],
+      "type": "function",
       "name": "boolRegistered",
-      "outputs": [
-        {
-          "internalType": "bool",
-          "name": "",
-          "type": "bool"
-        }
-      ],
+      "constant": true,
       "stateMutability": "view",
-      "type": "function"
+      "payable": false,
+      "inputs": [{ "type": "address" }],
+      "outputs": [{ "type": "bool" }]
     },
     {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "tokenId",
-          "type": "uint256"
-        }
-      ],
+      "type": "function",
       "name": "createMarketSale",
-      "outputs": [],
+      "constant": false,
       "stateMutability": "payable",
-      "type": "function"
+      "payable": true,
+      "inputs": [{ "type": "uint256", "name": "tokenId" }],
+      "outputs": []
     },
     {
-      "inputs": [],
+      "type": "function",
       "name": "fetchItemsListed",
+      "constant": true,
+      "stateMutability": "view",
+      "payable": false,
+      "inputs": [],
       "outputs": [
         {
+          "type": "tuple[]",
           "components": [
-            {
-              "internalType": "uint256",
-              "name": "tokenId",
-              "type": "uint256"
-            },
-            {
-              "internalType": "address payable",
-              "name": "seller",
-              "type": "address"
-            },
-            {
-              "internalType": "address payable",
-              "name": "owner",
-              "type": "address"
-            },
-            {
-              "internalType": "uint256",
-              "name": "price",
-              "type": "uint256"
-            },
-            {
-              "internalType": "bool",
-              "name": "sold",
-              "type": "bool"
-            }
-          ],
-          "internalType": "struct Velas.MarketItem[]",
-          "name": "",
-          "type": "tuple[]"
+            { "type": "uint256", "name": "tokenId" },
+            { "type": "address", "name": "seller" },
+            { "type": "address", "name": "owner" },
+            { "type": "uint256", "name": "price" },
+            { "type": "bool", "name": "sold" }
+          ]
         }
-      ],
-      "stateMutability": "view",
-      "type": "function"
+      ]
     },
     {
-      "inputs": [],
+      "type": "function",
       "name": "fetchMarketItems",
+      "constant": true,
+      "stateMutability": "view",
+      "payable": false,
+      "inputs": [],
       "outputs": [
         {
+          "type": "tuple[]",
           "components": [
-            {
-              "internalType": "uint256",
-              "name": "tokenId",
-              "type": "uint256"
-            },
-            {
-              "internalType": "address payable",
-              "name": "seller",
-              "type": "address"
-            },
-            {
-              "internalType": "address payable",
-              "name": "owner",
-              "type": "address"
-            },
-            {
-              "internalType": "uint256",
-              "name": "price",
-              "type": "uint256"
-            },
-            {
-              "internalType": "bool",
-              "name": "sold",
-              "type": "bool"
-            }
-          ],
-          "internalType": "struct Velas.MarketItem[]",
-          "name": "",
-          "type": "tuple[]"
+            { "type": "uint256", "name": "tokenId" },
+            { "type": "address", "name": "seller" },
+            { "type": "address", "name": "owner" },
+            { "type": "uint256", "name": "price" },
+            { "type": "bool", "name": "sold" }
+          ]
         }
-      ],
-      "stateMutability": "view",
-      "type": "function"
+      ]
     },
     {
-      "inputs": [],
+      "type": "function",
       "name": "fetchMyNFTs",
+      "constant": true,
+      "stateMutability": "view",
+      "payable": false,
+      "inputs": [],
       "outputs": [
         {
+          "type": "tuple[]",
           "components": [
-            {
-              "internalType": "uint256",
-              "name": "tokenId",
-              "type": "uint256"
-            },
-            {
-              "internalType": "address payable",
-              "name": "seller",
-              "type": "address"
-            },
-            {
-              "internalType": "address payable",
-              "name": "owner",
-              "type": "address"
-            },
-            {
-              "internalType": "uint256",
-              "name": "price",
-              "type": "uint256"
-            },
-            {
-              "internalType": "bool",
-              "name": "sold",
-              "type": "bool"
-            }
-          ],
-          "internalType": "struct Velas.MarketItem[]",
-          "name": "",
-          "type": "tuple[]"
+            { "type": "uint256", "name": "tokenId" },
+            { "type": "address", "name": "seller" },
+            { "type": "address", "name": "owner" },
+            { "type": "uint256", "name": "price" },
+            { "type": "bool", "name": "sold" }
+          ]
         }
-      ],
-      "stateMutability": "view",
-      "type": "function"
+      ]
     },
     {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "tokenId",
-          "type": "uint256"
-        }
-      ],
+      "type": "function",
       "name": "getApproved",
-      "outputs": [
-        {
-          "internalType": "address",
-          "name": "",
-          "type": "address"
-        }
-      ],
+      "constant": true,
       "stateMutability": "view",
-      "type": "function"
+      "payable": false,
+      "inputs": [{ "type": "uint256", "name": "tokenId" }],
+      "outputs": [{ "type": "address" }]
     },
     {
-      "inputs": [],
+      "type": "function",
       "name": "getListingPrice",
-      "outputs": [
-        {
-          "internalType": "uint256",
-          "name": "",
-          "type": "uint256"
-        }
-      ],
+      "constant": true,
       "stateMutability": "view",
-      "type": "function"
+      "payable": false,
+      "inputs": [],
+      "outputs": [{ "type": "uint256" }]
     },
     {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "owner",
-          "type": "address"
-        },
-        {
-          "internalType": "address",
-          "name": "operator",
-          "type": "address"
-        }
-      ],
+      "type": "function",
       "name": "isApprovedForAll",
-      "outputs": [
-        {
-          "internalType": "bool",
-          "name": "",
-          "type": "bool"
-        }
-      ],
+      "constant": true,
       "stateMutability": "view",
-      "type": "function"
+      "payable": false,
+      "inputs": [
+        { "type": "address", "name": "owner" },
+        { "type": "address", "name": "operator" }
+      ],
+      "outputs": [{ "type": "bool" }]
     },
     {
-      "inputs": [],
+      "type": "function",
       "name": "name",
-      "outputs": [
-        {
-          "internalType": "string",
-          "name": "",
-          "type": "string"
-        }
-      ],
+      "constant": true,
       "stateMutability": "view",
-      "type": "function"
+      "payable": false,
+      "inputs": [],
+      "outputs": [{ "type": "string" }]
     },
     {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "tokenId",
-          "type": "uint256"
-        }
-      ],
+      "type": "function",
       "name": "ownerOf",
-      "outputs": [
-        {
-          "internalType": "address",
-          "name": "",
-          "type": "address"
-        }
-      ],
+      "constant": true,
       "stateMutability": "view",
-      "type": "function"
+      "payable": false,
+      "inputs": [{ "type": "uint256", "name": "tokenId" }],
+      "outputs": [{ "type": "address" }]
     },
     {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "price",
-          "type": "uint256"
-        },
-        {
-          "internalType": "string",
-          "name": "userName",
-          "type": "string"
-        }
-      ],
+      "type": "function",
       "name": "register",
-      "outputs": [
-        {
-          "internalType": "uint256",
-          "name": "",
-          "type": "uint256"
-        }
-      ],
+      "constant": false,
       "stateMutability": "payable",
-      "type": "function"
+      "payable": true,
+      "inputs": [
+        { "type": "uint256", "name": "price" },
+        { "type": "string", "name": "userName" }
+      ],
+      "outputs": [{ "type": "uint256" }]
     },
     {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "tokenId",
-          "type": "uint256"
-        },
-        {
-          "internalType": "uint256",
-          "name": "price",
-          "type": "uint256"
-        }
-      ],
+      "type": "function",
       "name": "resellToken",
-      "outputs": [],
+      "constant": false,
       "stateMutability": "payable",
-      "type": "function"
+      "payable": true,
+      "inputs": [
+        { "type": "uint256", "name": "tokenId" },
+        { "type": "uint256", "name": "price" }
+      ],
+      "outputs": []
     },
     {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "from",
-          "type": "address"
-        },
-        {
-          "internalType": "address",
-          "name": "to",
-          "type": "address"
-        },
-        {
-          "internalType": "uint256",
-          "name": "tokenId",
-          "type": "uint256"
-        }
-      ],
+      "type": "function",
       "name": "safeTransferFrom",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
+      "constant": false,
+      "payable": false,
+      "inputs": [
+        { "type": "address", "name": "from" },
+        { "type": "address", "name": "to" },
+        { "type": "uint256", "name": "tokenId" }
+      ],
+      "outputs": []
     },
     {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "from",
-          "type": "address"
-        },
-        {
-          "internalType": "address",
-          "name": "to",
-          "type": "address"
-        },
-        {
-          "internalType": "uint256",
-          "name": "tokenId",
-          "type": "uint256"
-        },
-        {
-          "internalType": "bytes",
-          "name": "data",
-          "type": "bytes"
-        }
-      ],
+      "type": "function",
       "name": "safeTransferFrom",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
+      "constant": false,
+      "payable": false,
+      "inputs": [
+        { "type": "address", "name": "from" },
+        { "type": "address", "name": "to" },
+        { "type": "uint256", "name": "tokenId" },
+        { "type": "bytes", "name": "data" }
+      ],
+      "outputs": []
     },
     {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "operator",
-          "type": "address"
-        },
-        {
-          "internalType": "bool",
-          "name": "approved",
-          "type": "bool"
-        }
-      ],
+      "type": "function",
       "name": "setApprovalForAll",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
+      "constant": false,
+      "payable": false,
+      "inputs": [
+        { "type": "address", "name": "operator" },
+        { "type": "bool", "name": "approved" }
+      ],
+      "outputs": []
     },
     {
-      "inputs": [
-        {
-          "internalType": "bytes4",
-          "name": "interfaceId",
-          "type": "bytes4"
-        }
-      ],
+      "type": "function",
       "name": "supportsInterface",
-      "outputs": [
-        {
-          "internalType": "bool",
-          "name": "",
-          "type": "bool"
-        }
-      ],
+      "constant": true,
       "stateMutability": "view",
-      "type": "function"
+      "payable": false,
+      "inputs": [{ "type": "bytes4", "name": "interfaceId" }],
+      "outputs": [{ "type": "bool" }]
     },
     {
-      "inputs": [],
+      "type": "function",
       "name": "symbol",
-      "outputs": [
-        {
-          "internalType": "string",
-          "name": "",
-          "type": "string"
-        }
-      ],
+      "constant": true,
       "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "tokenId",
-          "type": "uint256"
-        }
-      ],
-      "name": "tokenURI",
-      "outputs": [
-        {
-          "internalType": "string",
-          "name": "",
-          "type": "string"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "from",
-          "type": "address"
-        },
-        {
-          "internalType": "address",
-          "name": "to",
-          "type": "address"
-        },
-        {
-          "internalType": "uint256",
-          "name": "tokenId",
-          "type": "uint256"
-        }
-      ],
-      "name": "transferFrom",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "_listingPrice",
-          "type": "uint256"
-        }
-      ],
-      "name": "updateListingPrice",
-      "outputs": [],
-      "stateMutability": "payable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "",
-          "type": "address"
-        }
-      ],
-      "name": "velasDomain",
-      "outputs": [
-        {
-          "internalType": "string",
-          "name": "",
-          "type": "string"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
+      "payable": false,
       "inputs": [],
-      "name": "vls",
-      "outputs": [
-        {
-          "internalType": "string",
-          "name": "",
-          "type": "string"
-        }
-      ],
+      "outputs": [{ "type": "string" }]
+    },
+    {
+      "type": "function",
+      "name": "tokenURI",
+      "constant": true,
       "stateMutability": "view",
-      "type": "function"
+      "payable": false,
+      "inputs": [{ "type": "uint256", "name": "tokenId" }],
+      "outputs": [{ "type": "string" }]
+    },
+    {
+      "type": "function",
+      "name": "transferFrom",
+      "constant": false,
+      "payable": false,
+      "inputs": [
+        { "type": "address", "name": "from" },
+        { "type": "address", "name": "to" },
+        { "type": "uint256", "name": "tokenId" }
+      ],
+      "outputs": []
+    },
+    {
+      "type": "function",
+      "name": "updateListingPrice",
+      "constant": false,
+      "stateMutability": "payable",
+      "payable": true,
+      "inputs": [{ "type": "uint256", "name": "_listingPrice" }],
+      "outputs": []
+    },
+    {
+      "type": "function",
+      "name": "velasDomain",
+      "constant": true,
+      "stateMutability": "view",
+      "payable": false,
+      "inputs": [{ "type": "address" }],
+      "outputs": [{ "type": "string" }]
+    },
+    {
+      "type": "function",
+      "name": "vls",
+      "constant": true,
+      "stateMutability": "view",
+      "payable": false,
+      "inputs": [],
+      "outputs": [{ "type": "string" }]
     }
   ]
 }
