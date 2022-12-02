@@ -13,34 +13,3 @@ REPORT_GAS=true npx hardhat test
 npx hardhat node
 npx hardhat run scripts/deploy.js
 ```
-
-{/_==========my domains=============_/}
-
-<div className="mintedDomains">
-<div className="allMintedDomains">My Domains</div>
-<div className="mintedDomains_container">
-<div className="nftcard">
-<div className="domainNft"></div>
-<div className="price">10 vlx</div>
-<button className="buy">Resell</button>
-</div>
-<div className="nftcard">
-<div className="domainNft"></div>
-<div className="price">10 vlx</div>
-<button className="buy">Resell</button>
-</div>
-<div className="nftcard">
-<div className="domainNft"></div>
-<div className="price">10 vlx</div>
-<button className="buy">Resell</button>
-</div>
-<div className="nftcard">
-<div className="domainNft"></div>
-<div className="price">10 vlx</div>
-<button className="buy">Resell</button>
-</div>
-</div>
-</div>
-{/_==========my domains=============_/}
-
-
